@@ -4,47 +4,35 @@ CNN to detect cracks in images
 This project implements a binary image classification model to detect wall cracks.
 Images are classified as either:
 
-Positive (Cracked)
+-Positive (Cracked)
 
-Negative (No Crack)
+-Negative (No Crack)
 
 A pretrained ResNet-18 model from PyTorch was fine-tuned on a dataset of 224×224 images.
 The model was trained with the Adam optimizer and a learning rate of 0.01, achieving a test accuracy of ~97%.
 
-📌 Project Description
+Project Description:
+The goal of this project is to build an automated system that can identify cracks in walls or granite like objects from images, which can help in structural health monitoring and preventive maintenance.
 
-The goal of this project is to build an automated system that can identify cracks in walls from images, which can help in structural health monitoring and preventive maintenance.
+I worked on a data set with size of 20k for positive and 20k for negative classes images.
 
 Workflow:
-
 Exploratory Data Analysis (EDA)
-
 Distribution of cracked vs non-cracked images
-
 Sample visualization of wall surfaces
-
 Dataset balancing and preprocessing insights
-
 Data Preparation
-
 All images resized to 224×224
-
 Normalization applied using ImageNet statistics (mean & std)
 
-Model
 
+Model:
 Pretrained ResNet-18 used as the base
-
 Final fully connected layer modified for binary classification
-
 Optimized with Adam (lr=0.01)
-
 Loss: CrossEntropyLoss
 
-Training & Evaluation
-
+Training & Evaluation:
 Model trained on labeled dataset of wall cracks
-
 Achieved ~97% accuracy on the test set
-
 Supports per-class accuracy reporting
